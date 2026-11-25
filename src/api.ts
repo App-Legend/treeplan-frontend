@@ -2,7 +2,8 @@
 // 로그인하지 않았으면 게스트 토큰을 자동으로 받아 쓴다(로그인 없이 작업 가능).
 // 로그인·가입할 때 게스트 토큰을 함께 보내면 게스트로 만든 결과가 계정 히스토리로 옮겨진다.
 
-const BASE = (import.meta.env.VITE_API_BASE as string | undefined) ?? "/api";
+// 상대 주소라서 화면이 어느 경로에 올라가도(예: /team2/) 같은 경로 아래의 api 로 간다
+const BASE = (import.meta.env.VITE_API_BASE as string | undefined) ?? "api";
 const AUTH_KEY = "treeplan.auth";
 
 export type UserInfo = { id: number; email: string | null; name: string; guest: boolean };

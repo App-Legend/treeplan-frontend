@@ -765,7 +765,7 @@ function Experience({ route }: { route: string }) {
               <div key={title} className="journey-step">
                 <span className="number">0{i + 1}</span>
                 <div className="journey-tick">
-                  <img src="/assets/af4a6.svg" alt="" />
+                  <img src="assets/af4a6.svg" alt="" />
                 </div>
                 <div>
                   <strong>{title}</strong>
@@ -773,7 +773,7 @@ function Experience({ route }: { route: string }) {
                 </div>
               </div>
             ))}
-            <img className="journey-end" src="/assets/50f38.svg" alt="" />
+            <img className="journey-end" src="assets/50f38.svg" alt="" />
           </section>
         </main>
       )}
@@ -1255,7 +1255,7 @@ function Experience({ route }: { route: string }) {
           </div>
           {overlay === "loading" ? (
             <div className="idea-loading">
-              <img className="spinner" src="/assets/b5da8.svg" alt="" />
+              <img className="spinner" src="assets/b5da8.svg" alt="" />
               <h2>아이디어를 만들고 있어요</h2>
               <p>세 단어의 연결점을 찾는 중이에요.</p>
               <p className="muted">
@@ -1682,7 +1682,7 @@ function AuthModal({
   return (
     <Modal label={title} onClose={onClose} className="auth-modal">
       <Close onClick={onClose} />
-      <img className="auth-mark" src="/assets/bda8c.svg" alt="" />
+      <img className="auth-mark" src="assets/bda8c.svg" alt="" />
       <h1>{title}</h1>
       <p className="auth-description">
         {type === "reset"

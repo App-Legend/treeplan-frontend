@@ -371,8 +371,8 @@ export default function TreeCanvas({
     >
       <div className="dot-grid" aria-hidden="true">
         <picture>
-          <source media="(max-width:767px)" srcSet="/assets/021e2.svg" />
-          <img src="/assets/6f452.svg" alt="" />
+          <source media="(max-width:767px)" srcSet="assets/021e2.svg" />
+          <img src="assets/6f452.svg" alt="" />
         </picture>
       </div>
       <div className="canvas-label">
@@ -431,8 +431,8 @@ export default function TreeCanvas({
         <div className="empty-tree">
           <span className="mark-box">
             <picture>
-              <source media="(max-width:767px)" srcSet="/assets/25002.svg" />
-              <img src="/assets/e9a2a.svg" alt="" />
+              <source media="(max-width:767px)" srcSet="assets/25002.svg" />
+              <img src="assets/e9a2a.svg" alt="" />
             </picture>
           </span>
           <h3>위에서 분야를 먼저 골라 주세요</h3>

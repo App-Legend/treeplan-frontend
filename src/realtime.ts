@@ -28,8 +28,11 @@ export function subscribeSession(
   const connect = () => {
     const token = getToken();
     if (!token || stopped) return;
-    const proto = location.protocol === "https:" ? "wss" : "ws";
-    ws = new WebSocket(`${proto}://${location.host}/api/ws`);
+    // 현재 화면 경로 기준(예: /team2/api/ws)으로 붙는다
+    const url = new URL("api/ws", location.href);
+    url.protocol = location.protocol === "https:" ? "wss:" : "ws:";
+    url.hash = "";
+    ws = new WebSocket(url);
     ws.onopen = () => {
       ws!.send(frame("CONNECT", { "accept-version": "1.2", "heart-beat": "0,0", Authorization: "Bearer " + token }));
     };

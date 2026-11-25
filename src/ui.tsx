@@ -20,7 +20,7 @@ export const icons = {
 export function Icon({ name }: { name: keyof typeof icons }) {
   return (
     <span className="icon">
-      <img src={`/assets/${icons[name]}.svg`} alt="" draggable="false" />
+      <img src={`assets/${icons[name]}.svg`} alt="" draggable="false" />
     </span>
   );
 }
@@ -50,8 +50,8 @@ export function Numbered({ n, children }: { n: string; children: ReactNode }) {
 export function Logo() {
   return (
     <picture>
-      <source media="(max-width:767px)" srcSet="/assets/91486.svg" />
-      <img className="logo" src="/assets/5d465.svg" alt="treeplan." />
+      <source media="(max-width:767px)" srcSet="assets/91486.svg" />
+      <img className="logo" src="assets/5d465.svg" alt="treeplan." />
     </picture>
   );
 }

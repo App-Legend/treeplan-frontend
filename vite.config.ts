@@ -7,6 +7,8 @@ export default defineConfig(({ mode }) => {
   const target =
     process.env.VITE_API_TARGET ?? root.VITE_API_TARGET ?? `http://localhost:${root.PORT || 8080}`;
   return {
+    // 빌드 결과를 상대 경로로 만들어, 백엔드 안에 넣어 /team2/ 같은 하위 경로에서 열어도 파일을 찾게 한다
+    base: "./",
     plugins: [react()],
     build: { sourcemap: true },
     server: {
